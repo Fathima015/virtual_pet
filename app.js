@@ -45,6 +45,15 @@ class VirtualPetRock {
             "stormy": "⛈️"
         };
 
+        this.accessoryImages = {
+            'none': 'images/eye open.png',
+            'sunglasses': 'images/glasses.png',
+            'hat': 'images/hat.png',
+            'bow-tie': 'images/bow.png',
+            'mustache': 'images/moustache.png',
+            'thug': 'images/thug.png'
+        };
+
         // Game state
         this.clickCount = parseInt(localStorage.getItem('rockClickCount')) || 0;
         this.messageCount = parseInt(localStorage.getItem('rockMessageCount')) || 0;
@@ -56,6 +65,7 @@ class VirtualPetRock {
 
         // DOM elements
         this.rock = document.getElementById('rock');
+        this.rockImage = document.getElementById('rockImage');
         this.rockName = document.getElementById('rockName');
         this.responseBubble = document.getElementById('responseBubble');
         this.bubbleContent = document.getElementById('bubbleContent');
@@ -102,11 +112,10 @@ class VirtualPetRock {
         // Rock clicking
         this.rock.addEventListener('click', () => this.handleRockClick());
 
-        // Name editing - fix the name replacement issue
+        // Name editing
         this.rockName.addEventListener('focus', () => {
-            this.rockName.select(); // Select all text when focused
+            this.rockName.select();
         });
-        
         this.rockName.addEventListener('blur', () => this.saveName());
         this.rockName.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
@@ -114,20 +123,20 @@ class VirtualPetRock {
             }
         });
 
-        // Journal
+        // Accessory buttons
+        document.querySelectorAll('.accessory-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const accessory = btn.getAttribute('data-accessory');
+                this.setAccessory(accessory);
+            });
+        });
+
+        // Message sending
         document.getElementById('sendMessage').addEventListener('click', () => this.sendMessage());
         this.journalInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 this.sendMessage();
             }
-        });
-
-        // Accessories
-        document.querySelectorAll('.accessory-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const accessory = e.target.getAttribute('data-accessory');
-                this.setAccessory(accessory);
-            });
         });
     }
 
@@ -297,28 +306,16 @@ class VirtualPetRock {
     }
 
     setAccessory(accessory) {
-        // Hide all accessories first
-        document.querySelectorAll('.accessory').forEach(acc => {
-            acc.classList.add('hidden');
-        });
-
-        // Show selected accessory with correct ID mapping
-        if (accessory !== 'none') {
-            let elementId = accessory;
-            // Handle special cases for ID mapping
-            if (accessory === 'bow-tie') {
-                elementId = 'bowTie';
-            }
-            
-            const accessoryElement = document.getElementById(elementId);
-            if (accessoryElement) {
-                accessoryElement.classList.remove('hidden');
-            }
+        console.log(`Setting accessory to: ${accessory}`);
+        
+        if (this.accessoryImages[accessory]) {
+            this.rockImage.src = this.accessoryImages[accessory];
+            this.currentAccessory = accessory;
+            localStorage.setItem('rockAccessory', accessory);
+            this.updateAccessoryButtons();
+        } else {
+            console.error(`Accessory image not found for: ${accessory}`);
         }
-
-        this.currentAccessory = accessory;
-        localStorage.setItem('rockAccessory', accessory);
-        this.updateAccessoryButtons();
     }
 
     updateAccessoryButtons() {
