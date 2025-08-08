@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Pet Rock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="My Pet Rock" />
+    <meta property="og:description" content="A pet that will never leave you." />
+    <meta property="og:image" content="images/cover.png"/>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>My Pet Rock</h1>
+            <div class="stats">
+                <span>Days: <span id="days">1</span></span>
+                <span>Clicks: <span id="clickCount">0</span></span>
+                <span>Messages: <span id="messageCount">0</span></span>
+            </div>
+        </header>
+
+        <!-- Main Pet Area -->
+        <div class="pet-container">
+            <!-- Weather Display -->
+            <div class="weather-display">
+                <span id="weatherIcon">☀️</span>
+                <span id="weatherText">Sunny</span>
+            </div>
+
+            <!-- Pet Rock -->
+            <div class="rock-area">
+                <div class="rock-container" id="rockContainer">
+                    <div class="rock" id="rock">
+    <img src="images/eye open.png" alt="Pet Character" class="character-img img" id="rockImage">
+    <!-- Special Expressions -->
+    <div class="smirk hidden" id="smirk"></div>
+    <!-- Custom Sunglasses Image -->
+    <div class="accessory sunglasses-img hidden" id="sunglasses-img">
+        <img src="images/WhatsApp_Image_2025-08-08_at_20.58.18-removebg-preview.png" alt="Custom Sunglasses" class="sunglasses-img">
+    </div>
+</div>
+
+                </div>
+                
+                <!-- Rock Name -->
+                <div class="rock-name-container">
+                    <input type="text" id="rockName" class="rock-name" value="Rock" maxlength="15">
+                </div>
+            </div>
+
+            <!-- Response Bubble -->
+            <div class="response-bubble hidden" id="responseBubble">
+                <div class="bubble-content" id="bubbleContent">...</div>
+            </div>
+
+            <!-- Mood Display -->
+            <div class="mood-display">
+                <span id="moodText">Rock feels... bored.</span>
+            </div>
+        </div>
+
+        <!-- Accessories Panel -->
+        <div class="accessories-panel">
+            <h3>Accessories</h3>
+            <div class="accessory-buttons">
+                <button class="btn btn--secondary accessory-btn" data-accessory="none">None</button>
+                <button class="btn btn--secondary accessory-btn" data-accessory="sunglasses">🕶️</button>
+                <button class="btn btn--secondary accessory-btn" data-accessory="hat">🎩</button>
+                <button class="btn btn--secondary accessory-btn" data-accessory="bow-tie">🎀</button>
+                <button class="btn btn--secondary accessory-btn" data-accessory="mustache">👨</button>
+                <button class="btn btn--secondary accessory-btn" data-accessory="thug">😎</button>
+            </div>
+        </div>
+
+        <!-- Journal Section -->
+        <div class="journal-section">
+            <h3>Tell Your Rock Something</h3>
+            <div class="journal-input-area">
+                <input type="text" id="journalInput" class="form-control" placeholder="Share your thoughts with your rock..." maxlength="100">
+                <button class="btn btn--primary" id="sendMessage">Send</button>
+            </div>
+            <div class="journal-messages" id="journalMessages">
+                <p class="no-messages">Your rock is listening... silently.</p>
+            </div>
+        </div>
+
+
+        <!-- Easter Egg Notifications -->
+        <div class="notification hidden" id="notification">
+            <div class="notification-content" id="notificationContent"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
