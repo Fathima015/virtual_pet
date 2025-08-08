@@ -166,11 +166,12 @@ class VirtualPetRock {
     }
 
     blink() {
-        this.rock.classList.add('blink');
-        setTimeout(() => {
-            this.rock.classList.remove('blink');
-        }, 150);
-    }
+    this.rock.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+        this.rock.style.transform = 'scale(1)';
+    }, 150);
+}
+
 
     startBlinkTimer() {
         const blinkInterval = () => {
