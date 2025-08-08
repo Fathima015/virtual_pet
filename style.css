@@ -1260,7 +1260,7 @@ body {
 }
 
 .journal-message {
-  background: #6e767f;
+  background: #41638a;
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-sm);
   padding: var(--space-8) var(--space-12);
