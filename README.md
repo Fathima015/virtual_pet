@@ -1,7 +1,6 @@
-<img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
+<img width="2470" height="1631" alt="cover" src="https://github.com/user-attachments/assets/c49e8646-2cd1-4ad1-aa1f-d54a5e274bbc" />
 
-
-# Virtual Pet 🎯
+# Virtual Pet Rock
 
 
 ## Basic Details
@@ -15,10 +14,10 @@
 ### Project Description
 This project brings to life a virtual pet rock, allowing you to adopt and interact with your own digital companion right in your browser. You can name your pet, share your thoughts with it, and even customize its look with a variety of fun accessories. It's a delightful, low-maintenance pet experience designed to bring a smile to your face.
 
-### The Problem (that doesn't exist)
+### The Problem 
  Dogs need walking, cats demand feeding, and hamsters are secretly plotting world domination from their wheels. We're solving the problem of high-maintenance companionship by offering a pet that requires nothing but your occasional, fleeting attention and thrives on digital silence.
 
-### The Solution (that nobody asked for)
+### The Solution 
 We're providing a revolutionary, browser-based pet rock that offers the emotional stability of a geological formation. It listens to your problems without interrupting, agrees with all your life choices by saying nothing at all, and its only need is for you to occasionally dress it up in a tiny bow tie. It's the perfect pet for the modern human: all of the companionship, none of the commitment.
 
 ## Technical Details
@@ -56,50 +55,28 @@ No special commands are needed to run the project. Simply open the `index.html` 
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
-!Screenshot of the project 
-(<Screenshot 2025-08-09 at 4.20.06 AM.png>)
+# Screenshots 
+
+Screenshot of the project 
+
+<img width="788" height="810" alt="Screenshot 2025-08-09 at 4 20 06 AM" src="https://github.com/user-attachments/assets/de109cdf-4b2d-40c2-8873-eb0aac7fb277" />
 
 
-/Users/afrahanas/Desktop/Screenshot 2025-08-09 at 4.20.42 AM.png
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+Screenshot of the accessories
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+<img width="1440" height="900" alt="Screenshot 2025-08-09 at 4 20 42 AM" src="https://github.com/user-attachments/assets/1ec5e766-b383-4dac-8eaa-4dab5814efe3" />
 
-For Hardware:
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
+Screenshot of the journal
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+<img width="809" height="505" alt="Screenshot 2025-08-09 at 4 40 16 AM" src="https://github.com/user-attachments/assets/68450960-aed5-4bb0-96e6-f42b644fa3ea" />
 
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
 [Add your demo video link here]
 *Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
