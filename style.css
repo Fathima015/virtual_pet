@@ -1058,14 +1058,6 @@ body {
   border-radius: 50% 50% 0 0;
 }
 
-.crown {
-  position: absolute;
-  top: -30px;   /* move up above character */
-  left: 20px;   /* adjust horizontal placement */
-  width: 80px;  /* size to fit */
-  pointer-events: none; /* so clicks pass through */
-}
-
 
 /* Rock Name */
 .rock-name-container {
